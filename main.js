@@ -596,9 +596,25 @@ function togglePlay() {
 audioControl.addEventListener('click', togglePlay);
 
 // Attempt autoplay on load (will likely fail without interaction, but worth a try)
-window.addEventListener('load', () => {
-    // Optional: Show a "Play" hint if needed. For now, discrete.
-});
+// Autoplay disabled by user request
+// window.addEventListener('load', () => {
+//     // Attempt autoplay
+//     const playPromise = audio.play();
+
+//     if (playPromise !== undefined) {
+//         playPromise.then(_ => {
+//             // Autoplay started!
+//             isPlaying = true;
+//             audioIcon.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+//             audioIcon.classList.add('playing');
+//             initAudio();
+//             renderVisualizer();
+//         }).catch(error => {
+//             // Auto-play was prevented
+//             console.log("Autoplay prevented by browser policy. User interaction needed.");
+//         });
+//     }
+// });
 
 function renderVisualizer() {
     if (!isPlaying) {

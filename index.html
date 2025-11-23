@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Lugar Azul — Estimulación Temprana</title>
-    <meta name="description" content="Centro de Estimulación temprana con amor: actividades sensoriales, motricidad y juego social para bebés y niños pequeños.">
+    <meta name="description"
+        content="Centro de Estimulación temprana con amor: actividades sensoriales, motricidad y juego social para bebés y niños pequeños.">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-nav.css">
 
 </head>
 
@@ -28,17 +30,17 @@
             <a href="#testimonials" class="nav-link">Testimonios</a>
             <a href="#faq"> FAQ</a>
             <a href="#contact" class="nav-link">Contacto</a>
-            <div class="audio-control" title="Click to Play/Pause">
-                <div id="audio-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
-                        <path d="M8 5v14l11-7z" />
-                    </svg>
-                </div>
-                <canvas id="audio-visualizer"></canvas>
-                <audio id="bg-music" loop>
-                    <source src="sound.mp3" type="audio/mp3">
-                </audio>
+        </div>
+        <div class="audio-control" title="Click to Play/Pause">
+            <div id="audio-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                    <path d="M8 5v14l11-7z" />
+                </svg>
             </div>
+            <canvas id="audio-visualizer"></canvas>
+            <audio id="bg-music" loop>
+                <source src="sound.mp3" type="audio/mp3">
+            </audio>
         </div>
     </nav>
     <header id="banner" class="lofi-banner">
@@ -118,7 +120,8 @@
         </div>
 
         <!-- Lightbox Container -->
-        <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Visor de imágenes">
+        <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-hidden="true"
+            aria-label="Visor de imágenes">
             <button id="lightbox-close" class="lightbox-close">&times;</button>
             <button id="lightbox-prev" class="lightbox-nav prev">&#10094;</button>
             <div class="lightbox-content">
@@ -235,7 +238,8 @@
                     </div>
                     <div class="form-group">
                         <label for="contact-message" class="sr-only">Tu Mensaje</label>
-                        <textarea id="contact-message" name="message" placeholder="Tu Mensaje" rows="5" required></textarea>
+                        <textarea id="contact-message" name="message" placeholder="Tu Mensaje" rows="5"
+                            required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Enviar Mensaje</button>
                 </form>
@@ -261,9 +265,13 @@
     </footer>
 
     <button id="scrollToTop" class="scroll-to-top" title="Volver arriba">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
+        <svg class="desktop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M18 15l-6-6-6 6" />
+        </svg>
+        <svg class="mobile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7" />
         </svg>
     </button>
 
@@ -328,6 +336,7 @@
 
     <!-- Mobile Bottom Sheet Menu -->
     <div class="mobile-bottom-sheet" id="mobile-menu-sheet">
+        <div class="sheet-overlay"></div>
         <div class="sheet-content glass-effect">
             <div class="sheet-header">
                 <h3>Menú</h3>
@@ -368,10 +377,10 @@
                 </a>
             </div>
         </div>
-        <div class="sheet-overlay"></div>
     </div>
 
     <script src="main.js"></script>
 </body>
 
 </html>
+```
