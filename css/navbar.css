@@ -228,7 +228,9 @@
     .audio-control {
         display: flex !important;
         position: fixed;
-        top: 110px;
+        top: auto;
+        bottom: 550px;
+        /* Anchored to bottom, but high up to mimic top position */
         right: 0;
         z-index: 2000;
         background: transparent;
