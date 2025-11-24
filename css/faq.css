@@ -1,0 +1,109 @@
+.faq-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.faq-section h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: #FCE4EC;
+    margin: 0.5rem auto 0;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    background: #ffffff;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    padding: 0 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.faq-item:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+.faq-item.active {
+    background: #fff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border-color: #FCE4EC;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    transition: color 0.3s ease;
+    min-height: 48px;
+    /* Touch target */
+}
+
+.faq-question:hover {
+    color: #5d6d7e;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+@media (max-width: 1150px) {
+    .faq-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .faq-item {
+        padding: 2rem 1.5rem;
+    }
+
+    .faq-answer p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}

@@ -1,0 +1,405 @@
+.activities {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.activities h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.activities h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: #FCE4EC;
+    margin: 0.5rem auto 0;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.activity-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem 2rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.activity-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: #fff;
+}
+
+.activity-card:hover::before {
+    opacity: 1;
+}
+
+.activity-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #4a4a4a;
+    margin-bottom: 1rem;
+}
+
+.activity-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.card-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+    animation: gentleFloat 4s ease-in-out infinite;
+}
+
+.card-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: #FCE4EC;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.activity-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.activity-card:hover .card-icon::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Dynamic Service Details */
+.activity-detail {
+    animation: fadeIn 0.5s ease;
+    text-align: left;
+    width: 100%;
+    min-height: 50vh;
+    background: transparent;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 30px;
+    position: relative;
+}
+
+.detail-hero {
+    position: relative;
+    height: 380px;
+    background: linear-gradient(135deg, #FCE4EC 0%, #E8F5E9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 30px 30px 0 0;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
+    animation: pulse 10s ease-in-out infinite;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 2rem 4rem;
+}
+
+.hero-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: float 4s ease-in-out infinite;
+}
+
+.hero-icon {
+    font-size: 2.5rem;
+}
+
+.detail-hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #5d6d7e;
+    font-weight: 300;
+}
+
+.detail-content-wrapper {
+    padding: 0 2rem 4rem;
+    margin-top: -50px;
+    position: relative;
+    z-index: 3;
+}
+
+.detail-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 4rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.detail-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.detail-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.detail-section h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #FCE4EC;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.benefit-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.benefit-icon {
+    font-size: 2rem;
+    background: #f8f9fa;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.benefit-text strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 0.3rem;
+}
+
+.benefit-text p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.action-area {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2.5rem;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 10px 20px rgba(44, 62, 80, 0.2);
+}
+
+.back-btn:hover {
+    background: #34495e;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(44, 62, 80, 0.3);
+}
+
+.back-btn:active {
+    transform: scale(0.96);
+}
+
+@media (max-width: 1150px) {
+    .activities {
+        padding: 4rem 1.5rem;
+    }
+
+    .activities h2 {
+        font-size: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .activity-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .activity-card p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .detail-hero {
+        height: auto;
+        min-height: 300px;
+        align-items: center;
+        padding: 4rem 2rem;
+    }
+
+    .detail-hero h2 {
+        font-size: 2rem;
+    }
+
+    .detail-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .detail-content-wrapper {
+        padding: 0 1rem 2rem;
+        margin-top: 0;
+    }
+
+    .benefit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        padding-bottom: 0;
+    }
+
+    .back-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        width: 100%;
+        justify-content: center;
+        min-height: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-hero {
+        min-height: 250px;
+        padding: 3rem 1.5rem;
+    }
+
+    .hero-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-icon {
+        font-size: 2rem;
+    }
+
+    .detail-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .detail-content-wrapper {
+        padding: 0 0.5rem 2rem;
+    }
+}
