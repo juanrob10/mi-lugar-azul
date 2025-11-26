@@ -40,7 +40,7 @@
 
 .banner-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 4rem;
+    font-size: var(--fs-h1);
     margin-bottom: 0.5rem;
     color: #2c3e50;
     letter-spacing: 1px;
@@ -51,7 +51,7 @@
 }
 
 .banner-content p {
-    font-size: 1.2rem;
+    font-size: var(--fs-body);
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #5d6d7e;
@@ -157,15 +157,7 @@
         -webkit-backdrop-filter: blur(15px);
     }
 
-    .banner-content h1 {
-        font-size: 2.5rem;
-        line-height: 1.2;
-    }
-
-    .banner-content p {
-        font-size: 1rem;
-        letter-spacing: 2px;
-    }
+    /* Font sizes handled by variables */
 }
 
 @media (max-width: 480px) {
@@ -185,15 +177,7 @@
         border-radius: 20px;
     }
 
-    .banner-content h1 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    .banner-content p {
-        font-size: 0.9rem;
-        letter-spacing: 1px;
-    }
+    /* Font sizes handled by variables */
 
     .scroll-indicator {
         bottom: 100px;
@@ -316,5 +300,35 @@
     50% {
         opacity: 1;
         transform: scale(1.2);
+    }
+}
+
+/* Mobile Dynamic Text */
+.mobile-dynamic-text {
+    display: none;
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: var(--fs-h2);
+    color: #fff;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .mobile-dynamic-text {
+        display: block;
+    }
+
+    /* Adjust scroll indicator to not overlap */
+    .scroll-indicator {
+        bottom: 5%;
     }
 }

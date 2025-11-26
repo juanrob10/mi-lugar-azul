@@ -46,7 +46,7 @@
     text-decoration: none;
     color: #4a4a4a;
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+    font-size: var(--fs-btn);
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: opacity 0.3s ease, text-shadow 0.3s ease;
@@ -184,7 +184,7 @@
     }
 
     .lofi-nav.scrolled .nav-links a {
-        font-size: 0.95rem;
+        font-size: var(--fs-small);
     }
 
     .lofi-nav.scrolled .nav-links {

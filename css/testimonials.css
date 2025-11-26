@@ -7,7 +7,7 @@
 
 .testimonials-section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
+    font-size: var(--fs-h2);
     color: #2c3e50;
     margin-bottom: 4rem;
     position: relative;
@@ -71,7 +71,7 @@
 .testimonial-card p {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: var(--fs-body);
     color: #555;
     line-height: 1.8;
     margin-bottom: 2rem;
@@ -107,12 +107,12 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: #2c3e50;
-    font-size: 1rem;
+    font-size: var(--fs-body);
 }
 
 .author-info small {
     font-family: 'Roboto', sans-serif;
-    font-size: 0.85rem;
+    font-size: var(--fs-small);
     color: #888;
 }
 
@@ -150,10 +150,7 @@
         padding: 2rem 1.5rem;
     }
 
-    .testimonial-card p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
+    /* Font sizes handled by variables */
 }
 
 @media (max-width: 480px) {
@@ -161,10 +158,7 @@
         padding: 3rem 0;
     }
 
-    .testimonials-section h2 {
-        font-size: 1.6rem;
-        margin-bottom: 2rem;
-    }
+    /* Font sizes handled by variables */
 
     .testimonials-container {
         padding: 1rem 1rem 2rem;
@@ -176,18 +170,11 @@
         padding: 1.5rem;
     }
 
-    .testimonial-card p {
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
+    /* Font sizes handled by variables */
 
-    .author-info span {
-        font-size: 0.9rem;
-    }
+    /* Font sizes handled by variables */
 
-    .author-info small {
-        font-size: 0.8rem;
-    }
+    /* Font sizes handled by variables */
 }
 
 @media (max-width: 1150px) {

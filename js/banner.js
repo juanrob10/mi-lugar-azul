@@ -77,7 +77,7 @@ if (canvas) {
     function initStars() {
         stars = [];
         // Number of stars based on screen size
-        const starCount = Math.floor((width * height) / 4000);
+        const starCount = Math.floor((width * height) / 500);
         for (let i = 0; i < starCount; i++) {
             stars.push(new Star());
         }
@@ -122,4 +122,33 @@ if (canvas) {
         // Fallback: start immediately
         startBannerAnimation();
     }
+}
+
+// Mobile Dynamic Text
+const dynamicTextEl = document.getElementById('dynamic-text');
+if (dynamicTextEl) {
+    const words = ['Amor', 'Paciencia', 'Descubrimiento', 'Juego'];
+    let currentIndex = 0;
+
+    function updateText() {
+        // Fade out
+        dynamicTextEl.style.opacity = '0';
+
+        setTimeout(() => {
+            // Change text
+            dynamicTextEl.textContent = words[currentIndex];
+            currentIndex = (currentIndex + 1) % words.length;
+
+            // Fade in
+            dynamicTextEl.style.opacity = '1';
+        }, 1000); // Wait for fade out
+    }
+
+    // Initial set
+    dynamicTextEl.textContent = words[0];
+    dynamicTextEl.style.opacity = '1';
+    currentIndex = 1;
+
+    // Cycle every 3 seconds
+    setInterval(updateText, 3000);
 }

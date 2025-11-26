@@ -6,11 +6,34 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Typography Scale - Desktop */
+    --fs-h1: 4rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.1rem;
+    --fs-small: 0.9rem;
+    --fs-btn: 1rem;
+}
+
+@media (max-width: 768px) {
+    :root {
+        /* Typography Scale - Mobile */
+        --fs-h1: 2.5rem;
+        --fs-h2: 1.8rem;
+        --fs-h3: 1.3rem;
+        --fs-body: 1rem;
+        --fs-small: 0.85rem;
+        --fs-btn: 0.95rem;
+    }
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #FCE4EC;
     /* Match banner background to avoid contrast when mobile nav hides */
     color: #4a4a4a;
+    font-size: var(--fs-body);
     overflow-x: hidden;
 }
 
