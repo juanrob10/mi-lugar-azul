@@ -234,6 +234,65 @@ const activitiesData = {
                 </div>
             </div>
         </div>
+    `,
+    ejecutivas: `
+        <div class="detail-hero hero-ejecutivas">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-icon-wrapper">
+                    <span class="hero-icon">⚙️</span>
+                </div>
+                <h2>Funciones Ejecutivas</h2>
+                <p class="hero-subtitle">Mente Organizada</p>
+            </div>
+        </div>
+        <div class="detail-content-wrapper">
+            <div class="detail-card glass-effect">
+                <p class="detail-description">Desarrollamos habilidades clave para el éxito en la vida diaria y escolar. A través de juegos estratégicos, fortalecemos la capacidad de planificar, concentrarse y regular impulsos. <strong>Especialmente diseñado para apoyar a niños con TDAH.</strong></p>
+                
+                <div class="detail-section">
+                    <h3>Habilidades para la Vida</h3>
+                    <ul class="benefit-grid">
+                        <li class="benefit-item">
+                            <span class="benefit-icon">📅</span>
+                            <div class="benefit-text">
+                                <strong>Planificación</strong>
+                                <p>Organizar pasos para una meta.</p>
+                            </div>
+                        </li>
+                        <li class="benefit-item">
+                            <span class="benefit-icon">🛑</span>
+                            <div class="benefit-text">
+                                <strong>Autocontrol</strong>
+                                <p>Pensar antes de actuar.</p>
+                            </div>
+                        </li>
+                        <li class="benefit-item">
+                            <span class="benefit-icon">🧠</span>
+                            <div class="benefit-text">
+                                <strong>Memoria de Trabajo</strong>
+                                <p>Recordar y usar información.</p>
+                            </div>
+                        </li>
+                        <li class="benefit-item">
+                            <span class="benefit-icon">🔄</span>
+                            <div class="benefit-text">
+                                <strong>Flexibilidad</strong>
+                                <p>Adaptarse a cambios.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="action-area">
+                    <button class="back-btn" onclick="showList()" aria-label="Regresar a Servicios">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
     `
 };
 
