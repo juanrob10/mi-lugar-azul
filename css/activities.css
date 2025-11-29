@@ -143,8 +143,8 @@
     width: 100%;
     height: 100%;
     background-image:
-        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(255, 182, 193, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 182, 193, 0.4) 0%, transparent 50%);
     animation: pulse 10s ease-in-out infinite;
 }
 
@@ -327,11 +327,13 @@
 
 @media (max-width: 1150px) {
     .activities {
-        padding: 3rem 1rem 1rem; /* CORREGIDO: menos padding bottom */
+        padding: 3rem 1rem 1rem;
+        /* CORREGIDO: menos padding bottom */
     }
 
     .activities h2 {
-        margin-bottom: 2rem; /* CORREGIDO: menos espacio bajo título */
+        margin-bottom: 2rem;
+        /* CORREGIDO: menos espacio bajo título */
     }
 
     .activities-grid {
@@ -346,32 +348,40 @@
 
     .detail-hero {
         height: auto;
-        min-height: 280px; /* CORREGIDO: altura más compacta */
+        min-height: 280px;
+        /* CORREGIDO: altura más compacta */
         align-items: center;
-        padding: 3rem 1.5rem; /* CORREGIDO: padding ajustado */
+        padding: 3rem 1.5rem;
+        /* CORREGIDO: padding ajustado */
     }
 
     .detail-card {
-        padding: 2rem 1.2rem; /* CORREGIDO: padding más compacto */
+        padding: 2rem 1.2rem;
+        /* CORREGIDO: padding más compacto */
     }
 
     .detail-content-wrapper {
-        padding: 0 0.5rem 1.5rem; /* CORREGIDO: menos padding */
+        padding: 0 0.5rem 1.5rem;
+        /* CORREGIDO: menos padding */
         margin-top: 0;
     }
 
     .benefit-grid {
         grid-template-columns: 1fr;
-        gap: 1.2rem; /* CORREGIDO: menos espacio entre beneficios */
+        gap: 1.2rem;
+        /* CORREGIDO: menos espacio entre beneficios */
     }
 
     .benefit-item {
-        padding: 1.5rem; /* CORREGIDO: más compacto */
-        gap: 1rem; /* CORREGIDO: menos espacio entre icono y texto */
+        padding: 1.5rem;
+        /* CORREGIDO: más compacto */
+        gap: 1rem;
+        /* CORREGIDO: menos espacio entre icono y texto */
     }
 
     .benefit-icon {
-        width: 45px; /* CORREGIDO: ligeramente más pequeño */
+        width: 45px;
+        /* CORREGIDO: ligeramente más pequeño */
         height: 45px;
         font-size: 1.8rem;
     }
@@ -389,24 +399,30 @@
     }
 
     .detail-description {
-        margin-bottom: 2.5rem; /* CORREGIDO: menos espacio */
-        line-height: 1.7; /* CORREGIDO: mejor para mobile */
+        margin-bottom: 2.5rem;
+        /* CORREGIDO: menos espacio */
+        line-height: 1.7;
+        /* CORREGIDO: mejor para mobile */
     }
 
     .action-area {
-        margin-top: 2.5rem; /* CORREGIDO: menos espacio */
+        margin-top: 2.5rem;
+        /* CORREGIDO: menos espacio */
         padding-top: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
     .activities {
-        padding: 2rem 0.5rem 0.5rem; /* CORREGIDO: aún más compacto */
+        padding: 2rem 0.5rem 0.5rem;
+        /* CORREGIDO: aún más compacto */
     }
 
     .detail-hero {
-        min-height: 240px; /* CORREGIDO: más compacto */
-        padding: 2rem 1rem; /* CORREGIDO: padding ajustado */
+        min-height: 240px;
+        /* CORREGIDO: más compacto */
+        padding: 2rem 1rem;
+        /* CORREGIDO: padding ajustado */
     }
 
     .hero-icon-wrapper {
@@ -425,7 +441,8 @@
     }
 
     .detail-content-wrapper {
-        padding: 0 0.5rem 1.5rem; /* CORREGIDO: menos padding */
+        padding: 0 0.5rem 1.5rem;
+        /* CORREGIDO: menos padding */
     }
 
     .back-btn {
@@ -434,7 +451,8 @@
     }
 
     .benefit-item {
-        padding: 1.2rem; /* CORREGIDO: más compacto en móviles pequeños */
+        padding: 1.2rem;
+        /* CORREGIDO: más compacto en móviles pequeños */
     }
 
     /* Mejorar legibilidad en móviles pequeños */
@@ -460,8 +478,10 @@
     #activities.section-active .activities-grid {
         display: flex;
         flex-direction: column;
-        gap: 1.2rem; /* CORREGIDO: menos espacio entre cards */
-        padding-bottom: 1rem; /* CORREGIDO: menos espacio inferior */
+        gap: 1.2rem;
+        /* CORREGIDO: menos espacio entre cards */
+        padding-bottom: 1rem;
+        /* CORREGIDO: menos espacio inferior */
     }
 
     #activities.section-active .activity-card {
@@ -481,15 +501,18 @@
 /* Ajustes para móviles muy pequeños */
 @media (max-width: 360px) {
     .activities {
-        padding: 1.5rem 0.25rem 0.25rem; /* CORREGIDO: mínimo espacio */
+        padding: 1.5rem 0.25rem 0.25rem;
+        /* CORREGIDO: mínimo espacio */
     }
 
     .detail-hero {
-        min-height: 220px; /* CORREGIDO: más compacto */
+        min-height: 220px;
+        /* CORREGIDO: más compacto */
     }
 
     .benefit-item {
-        flex-direction: column; /* CORREGIDO: apilar icono y texto */
+        flex-direction: column;
+        /* CORREGIDO: apilar icono y texto */
         text-align: center;
         gap: 0.8rem;
     }
