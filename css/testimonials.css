@@ -18,7 +18,7 @@
     display: block;
     width: 50%;
     height: 2px;
-    background-color: #FCE4EC;  
+    background-color: #FCE4EC;
     margin: 0.5rem auto 0;
 }
 
@@ -35,7 +35,7 @@
     padding: 2rem 1rem 2rem;
     scroll-behavior: smooth;
     cursor: grab;
-    
+
     /* Hide scrollbar */
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -67,6 +67,7 @@
     min-width: 300px;
     display: flex;
     flex-direction: column;
+    will-change: transform, box-shadow;
 }
 
 .testimonial-card:hover {
@@ -199,10 +200,10 @@
 @media (max-width: 600px) {
 
     .quote-icon {
-     font-size: 3.5rem;
-     right: .5rem;
+        font-size: 3.5rem;
+        right: .5rem;
     }
-    
+
     #testimonials.section-active .testimonial-card,
     .testimonial-card {
         flex: 0 0 85%;
@@ -215,7 +216,7 @@
         padding: 0.5rem 0.5rem 0.5rem;
         gap: 1rem;
     }
-    
+
     .testimonial-card p {
         margin-bottom: 1.5rem;
         line-height: 1.6;
@@ -224,6 +225,7 @@
 
 /* Extra small devices */
 @media (max-width: 480px) {
+
     #testimonials.section-active .testimonial-card,
     .testimonial-card {
         flex: 0 0 90%;
@@ -231,7 +233,7 @@
         min-width: 90%;
         padding: 1.25rem;
     }
-    
+
     .testimonials-container {
         gap: 0.75rem;
         padding: 0.25rem 0.25rem 0.25rem;
@@ -244,7 +246,7 @@
         line-height: 1.5;
         font-size: calc(var(--fs-body) * 0.95);
     }
-    
+
     .testimonial-card {
         padding: 1rem;
     }

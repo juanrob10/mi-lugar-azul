@@ -25,6 +25,7 @@
     font-size: 3rem;
     margin-bottom: 1rem;
     animation: gentleFloat 4s ease-in-out infinite;
+    will-change: transform;
 }
 
 .about-section h2 {

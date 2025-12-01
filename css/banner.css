@@ -31,6 +31,7 @@
     z-index: 2;
     position: relative;
     transition: transform 0.3s ease;
+    will-change: transform;
 }
 
 .banner-content:hover {
@@ -64,6 +65,7 @@
     display: inline-block;
     opacity: 0;
     animation: pixarBounce 1.2s ease-out forwards;
+    will-change: transform, opacity;
 }
 
 .letter:nth-child(2) {

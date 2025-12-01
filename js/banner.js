@@ -83,7 +83,10 @@ if (canvas) {
         }
     }
 
+    let isAnimating = false;
+
     function animate() {
+        if (!isAnimating) return;
         ctx.clearRect(0, 0, width, height);
         stars.forEach(star => {
             star.update();
@@ -97,30 +100,32 @@ if (canvas) {
         initStars();
     });
 
-    // Start animation lazily when banner enters the viewport to save CPU on load
-    function startBannerAnimation() {
-        // Avoid starting multiple times
-        if (window.__bannerAnimationStarted) return;
-        window.__bannerAnimationStarted = true;
-        resize();
-        initStars();
-        animate();
-    }
-
     const bannerEl = document.getElementById('banner');
     if (bannerEl && 'IntersectionObserver' in window) {
-        const bannerObserver = new IntersectionObserver((entries, obs) => {
+        const bannerObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    startBannerAnimation();
-                    obs.unobserve(entry.target);
+                    if (!isAnimating) {
+                        isAnimating = true;
+                        // Initialize if first time or resize needed
+                        if (stars.length === 0) {
+                            resize();
+                            initStars();
+                        }
+                        animate();
+                    }
+                } else {
+                    isAnimating = false;
                 }
             });
         }, { root: null, threshold: 0 });
         bannerObserver.observe(bannerEl);
     } else {
-        // Fallback: start immediately
-        startBannerAnimation();
+        // Fallback: start immediately and keep running
+        isAnimating = true;
+        resize();
+        initStars();
+        animate();
     }
 }
 
