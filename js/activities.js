@@ -293,6 +293,65 @@ const activitiesData = {
                 </div>
             </div>
         </div>
+    `,
+    crianza: `
+        <div class="detail-hero hero-crianza">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-icon-wrapper">
+                    <span class="hero-icon">👨‍👩‍👧‍👦</span>
+                </div>
+                <h2>Crianza Consciente</h2>
+                <p class="hero-subtitle">Creciendo Juntos</p>
+            </div>
+        </div>
+        <div class="detail-content-wrapper">
+            <div class="detail-card glass-effect">
+                <p class="detail-description">La crianza no viene con manual, pero no tienes que hacerlo solo. Te acompañamos a entender el mundo desde los ojos de tu hijo, fomentando una relación basada en el respeto mutuo, la conexión profunda y límites establecidos desde el amor, no desde el miedo.</p>
+                
+                <div class="detail-section">
+                    <h3>Herramientas para Papás</h3>
+                    <ul class="benefit-grid">
+                        <li class="benefit-item">
+                            <span class="benefit-icon">🤝</span>
+                            <div class="benefit-text">
+                                <strong>Conexión Profunda</strong>
+                                <p>Fortalecer el vínculo afectivo.</p>
+                            </div>
+                        </li>
+                        <li class="benefit-item">
+                            <span class="benefit-icon">🚧</span>
+                            <div class="benefit-text">
+                                <strong>Límites Sanos</strong>
+                                <p>Firmeza y amabilidad a la vez.</p>
+                            </div>
+                        </li>
+                        <li class="benefit-item">
+                            <span class="benefit-icon">🗣️</span>
+                            <div class="benefit-text">
+                                <strong>Comunicación</strong>
+                                <p>Hablar para que escuchen.</p>
+                            </div>
+                        </li>
+                        <li class="benefit-item">
+                            <span class="benefit-icon">🧘</span>
+                            <div class="benefit-text">
+                                <strong>Calma Parental</strong>
+                                <p>Gestionar tu propio estrés.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="action-area">
+                    <button class="back-btn" onclick="showList()" aria-label="Regresar a Servicios">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
     `
 };
 
